@@ -1,0 +1,15 @@
+{
+  "name": "hanan",
+  "version": "3.0.1",
+  "description": "Hello Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "hello"
+  },
+  "keywords": [
+    "node",
+    "start"
+  ],
+  "author": "hanan",
+  "license": "ISC"
+}

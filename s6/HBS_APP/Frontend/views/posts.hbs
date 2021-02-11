@@ -1,0 +1,19 @@
+{{>header}}
+{{>nav}}
+<section class="container my-5">
+    <div class="row">
+        {{#each posts}}
+        <div class="col-3">
+            <h2>{{this.userId}}</h2>
+            <h2>{{this.id}}</h2>
+            <h2>{{this.title}}</h2>
+            <p>{{this.body}}</p>
+        </div>
+        {{/each}}
+    </div>
+{{#each myarr}}
+<li>{{this}}</li>
+{{/each}}
+</section>
+
+{{>footer}}
