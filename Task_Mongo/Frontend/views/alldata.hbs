@@ -1,0 +1,27 @@
+{{>header}}
+{{>nav}}
+    <section class="container border border-2 my-3">
+        <table class="table table-bordered my-4">
+            <thead>
+                <th>id</th>
+                <th>Task Title</th>
+                <th>Task Content</th>
+                <th>Task Type</th>
+                <th>actions</th>
+            </thead>
+            <tbody>
+                {{#each data as | t |}}
+                    <tr>
+                        <td> {{t._id}} </td>
+                        <td> {{t.title}} </td>
+                        <td> {{t.content}} </td>
+                        <td> {{t.type}} </td>
+
+                        <td><a class="btn btn-warning" href="/edit/{{t._id}}">Edit</a>
+                        <a class="btn btn-danger" href="/delete/{{t._id}}">Delete</a> </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </section>
+{{>footer}}

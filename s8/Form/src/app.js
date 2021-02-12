@@ -13,7 +13,6 @@ hbs.registerPartials(myPartialsFiles)
 app.use(express.static(myPublicFiles))
 app.use(express.urlencoded({ extended: true }))
 
-//app.use(express.urlencoded())
 function testConnect(callback){
     const myDBUrl = 'mongodb://127.0.0.1:27017'
     const dbName = "myNewG4Form"
