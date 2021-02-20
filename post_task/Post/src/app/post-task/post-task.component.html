@@ -1,0 +1,30 @@
+<section class="container">
+    <table class="table table-bordered text-center">
+        <thead>
+            <!-- userId: Number
+            id: Number
+            title: String
+            body: String -->
+            <tr>
+                <th [attr.rowSpan]="'2'" class="align-middle">userId</th>
+                <th [attr.rowSpan]="'2'" class="align-middle">id</th>
+                <th [attr.rowSpan]="'2'" class="align-middle">title</th>
+                <th [attr.rowSpan]="'3'" class="align-middle">body</th>
+               
+            </tr>
+    
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users; let i=index; let o=odd; let e=even"
+            [ngClass]="{odd:o, even:e}"
+            > 
+                <td>{{i}}</td>
+                <td>{{user.userId}}</td>
+                <td>{{user.id}}</td>
+                <td>{{user.title}}</td>
+                <td>{{user.body}}</td>
+            
+            </tr>
+        </tbody>
+    </table>
+</section> 
