@@ -1,0 +1,36 @@
+<h2 class="text-center">Register</h2>
+<div [ngClass]="flag?'alert alert-success':'alert alert-danger'" *ngIf="flag!=null">
+    {{flag?'registered':'error accoured'}}
+</div>
+<form [formGroup]="registerForm" (ngSubmit)="handelRegister()">  
+    <input placeholder="name" class="form-control my-3" formControlName="name"    
+    [ngClass]="(name?.invalid && (name?.touched || name?.dirty))?'err':''"
+    >
+    <div class="alert alert-danger" *ngIf="name?.invalid && (name?.touched || name?.dirty)">
+        name is required
+    </div>
+    <input placeholder="email" class="form-control my-3" formControlName="email"
+    [ngClass]="(email?.invalid && (email?.touched || email?.dirty))?'err':''">
+    <div class="alert alert-danger" *ngIf="email?.invalid && (email?.touched || email?.dirty)">
+        <div *ngIf="email.errors?.required">
+            email required
+        </div>
+        <div *ngIf="email.errors?.email">
+            email value failed
+        </div>
+    </div>
+    <input placeholder="password" class="form-control my-3" formControlName="password">
+    <input placeholder="phone" class="form-control my-3" formControlName="phone">
+    <input placeholder="age" class="form-control my-3" formControlName="age">
+<ng-container formGroupName="addresses">
+    <input placeholder="address type" class="form-control my-3" formControlName="addr_type">
+    <input placeholder="address details" class="form-control my-3" formControlName="details">
+</ng-container>
+    <select class="form-control my-3" formControlName="user_type">
+        <option selected disabled>please choose your type</option>
+        <option value="Admin">Admin</option>
+        <option value="provider">provider</option>
+        <option value="user">user</option>
+    </select>
+    <button type="submit" class="btn btn-success">Add user</button>
+</form>

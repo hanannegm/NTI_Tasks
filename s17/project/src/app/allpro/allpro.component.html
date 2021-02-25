@@ -1,0 +1,25 @@
+<section class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+            <th>userId</th>
+            <th>id</th>
+            <th>title</th>
+            <th>body</th>
+            <th>action</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor= "let post of allData">
+                <td>{{post.userId}}</td>
+                <td>{{post.id}}</td>
+                <td>{{post.title}}</td>
+                <td>{{post.body}}</td>
+                <td>
+<button [routerLink]="post.id">more</button>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>

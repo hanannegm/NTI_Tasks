@@ -1,0 +1,24 @@
+<section class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+            <th>PostId</th>
+            <th>id</th>
+            <th>name</th>
+            <th>email</th>
+            <th>body</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor= "let post of allComments">
+                <td>{{comments.PostId}}</td>
+                <td>{{comments.id}}</td>
+                <td>{{comments.name}}</td>
+                <td>{{comments.email}}</td>
+                <td>{{comments.body}}</td>
+
+
+            </tr>
+        </tbody>
+    </table>
+</section>
